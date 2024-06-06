@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+    <style>
+      #open-btn {
+        background-color: rgb(123, 161, 161);
+        position: absolute;
+        top: 30%;
+        height: 90px;
+        width: 50px;
+      }
+      #modal {
+        background-color: bisque;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        animation-name: animatemodal;
+        animation-duration: 0.4s;
+      }
+      #close-btn {
+        margin-left: 10px;
+        font-size: 3rem;
+      }
+      #close-btn {
+        cursor: pointer;
+        font-size: 3rem;
+        color: red;
+      }
+      #modal-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgb(0, 0, 0, 0.2);
+      }
+      @keyframes animatemodal {
+        from {
+          top: -300px;
+          opacity: 0;
+        }
+        to {
+          top: 50%;
+          opacity: 1;
+        }
+      }
+      .accordian {
+        width: 65%;
+        background-color: rosybrown;
+      }
+      .accordian .content .question {
+        padding: 18px 0px;
+        font-size: 20px;
+        cursor: pointer;
+        border-bottom: 1px solid black;
+        position: relative;
+      }
+      .accordian .content .question::after {
+        content: "+";
+        position: absolute;
+        right: 10px;
+      }
+      .accordian .content .answer {
+        padding-top: 15px;
+        font-size: 22px;
+        line-height: 1.5;
+        width: 100%;
+
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      .accordian .content.active .answer {
+        height: 150px;
+      }
+      .accordian .content.active .question {
+        font-size: 18px;
+        transition: 0.5s;
+      }
+      .accordian .content.active .question::after {
+        content: "-";
+        font-size: 30px;
+        transition: 0.5s;
+      }
+      .container3 {
+        width: 60%;
+        height: 250px;
+        background-color: bisque;
+      }
+      #timer {
+        width: 100%;
+        font-size: 72px;
+      }
+
+      #play {
+        background-color: rgb(182, 182, 224);
+      }
+
+      #reset {
+        background-color: aqua;
+      }
+
+      #addtask-con {
+        width: 350px;
+        padding: 20px 10px;
+        display: flex;
+        background-color: aqua;
+      }
+      input {
+        flex: 5;
+        font-size: 1.2rem;
+      }
+      #add-task {
+        flex: 1;
+        transition: 0.3s;
+      }
+      #add-task:hover {
+        background-color: green;
+        color: white;
+      }
+      .task {
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+        background-color: blanchedalmond;
+      }
+      .task li {
+        list-style: none;
+        flex: 4;
+
+        
+      }
+      .task button{
+        flex:1;
+        cursor: pointer;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <!--<div class="container">
+     <div class="header">
+         <h2>Quoate generater</h2>
+     </div>
+     <div class="main-content">
+         <div class="text-area">
+             <span class="qoute">
+                 "qjtriqrtitijerjtqrtqetjiqj
+                 ertejtjqwerktjqkjtqjektkqjtrk"
+             </span>
+         </div>
+         <div class="person"> Kabi</div>
+         <div class="btn-area">
+             <button id="new-quote"> New quote</button>
+         </div>
+     </div> 
+     </div>-->
+    <!--  <div class="container2">
+         <button id="open-btn">
+        <p>Open Modal</p>
+    </button>
+    <div id="modal-container">
+        <div id="modal">
+            <p>This is Modal page</p>
+            <div id="close-btn">&times</div>
+        </div>
+    </div>
+    </div>-->
+
+    <!--<div class="accordian">
+      <h2 class="title">FAQ</h2>
+      <div class="content">
+        <div class="question">What is class</div>
+        <div class="answer">
+          ewrjiwejriqwjierjwqijijwe qwkerlkqklekrqlkerq wekjqkrjqkwjerkwq
+        </div>
+      </div>
+      <div class="content">
+        <div class="question">What is class</div>
+        <div class="answer">
+          ewrjiwejriqwjierjwqijijwe qwkerlkqklekrqlkerq wekjqkrjqkwjerkwq
+        </div>
+      </div>
+      <div class="content">
+        <div class="question">What is class</div>
+        <div class="answer">
+          ewrjiwejriqwjierjwqijijwe qwkerlkqklekrqlkerq wekjqkrjqkwjerkwq
+        </div>
+      </div>
+    </div>-->
+
+    <!--<div class="container3">
+      <div id="timer">00:00:00</div>
+      <div class="buttons">
+        <button id="startStop">
+          <i id="play">Start</i>
+        </button>
+
+        <button id="resetBtn">
+          <i id="reset"> Reset</i>
+        </button>
+      </div>
+    </div>-->
+    <div class="contain4">
+      <div id="addtask-con">
+        <input type="text" placeholder="Enter Task" id="input-task" />
+        <button id="add-task"><i>+</i></button>
+      </div>
+
+      <div id="task-container"></div>
+    </div>
+
+    <!--<script src="project-1.js"></script>-->
+    <!--<script src="project-2.js"></script>-->
+    <!-- <script src="project-3.js"></script>-->
+    <!--<script src="project-4.js"></script>-->
+    <script src="project-5.js"></script>
+  </body>
+</html>
