@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallex</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="#" class="logo">Abdul</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+
+        <li><a href="#">Contact</a></li>
+
+        <li><a href="#">Donate</a></li>
+      </ul>
+    </header>
+    <section id="scene">
+      <h2 id="text">Parallex Scrolling</h2>
+      <img src="images/01.png" id="img1" />
+      <img src="images/02.png" id="img2" />
+      <img src="images/03.png" id="img3" />
+      <img src="images/04.png" id="img4" />
+    </section>
+    <div class="sec">
+      <h2>Parallex Scrolling Effect</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia illum
+        magni eligendi non accusantium, impedit sunt minima quos doloribus
+        molestias quaerat obcaecati eaque suscipit natus! Ab cumque sed impedit
+        est fugit, voluptatibus voluptate. Soluta voluptas, minus rem,
+        asperiores possimus nesciunt facilis neque eaque a nam voluptatibus quo
+        suscipit tenetur, nobis maxime ea harum pariatur exercitationem?
+        Excepturi quisquam quibusdam natus beatae provident corporis illum nisi,
+        veritatis dignissimos laborum, iste, blanditiis facere ipsa minima quo
+        illo veniam sapiente molestiae. Facilis, cum neque ad laudantium
+        doloremque beatae recusandae error eum eaque! Officia, nesciunt
+        recusandae! <br><br>Quisquam ducimus maiores quas, unde illo, rerum porro ipsum
+        et tempore delectus assumenda perferendis tenetur laboriosam incidunt
+        eveniet accusantium ullam pariatur iure hic quis? Eveniet repellat
+        temporibus, nisi consectetur similique minus quibusdam optio, vitae
+        tempora facilis voluptate. Consequatur dolorum atque, iusto numquam odit
+        fugit praesentium. Voluptate ab ipsa minus! Adipisci suscipit ullam
+        nostrum dicta tempora iure itaque temporibus est omnis ut, dolorem
+        mollitia. Aliquid nulla sequi minus fuga, numquam facilis labore quidem.
+        Libero dolore officiis quod ipsum error architecto porro voluptatibus
+        itaque, tempore, odio eligendi debitis, <br><br> nobis amet iure unde iusto
+        at repudiandae! Voluptatibus laboriosam debitis in! In fugiat
+        dignissimos odio asperiores, dolorem tenetur debitis, quam veniam earum
+        quas quae eum quod exercitationem incidunt nesciunt dicta laborum saepe
+        accusantium repellat quidem ipsam mollitia itaque illo. Quas nisi,
+        doloremque repellendus sunt fugit quibusdam omnis voluptatibus ea
+        eveniet suscipit commodi animi alias repellat, molestias repudiandae
+        minus vero itaque accusantium. Cupiditate neque optio libero eos
+        perferendis, perspiciatis eligendi repudiandae at adipisci id reiciendis
+        praesentium exercitationem ad tempora consequatur hic voluptas soluta.
+        Maxime, id nisi, ipsam numquam aspernatur quod fuga, omnis illum ducimus
+        aperiam doloremque facere eius nesciunt! Dignissimos explicabo nisi ea
+        ipsa cumque illo, repellendus cum, enim doloribus aspernatur sapiente
+        itaque et laborum commodi, nesciunt facilis eos quae debitis neque
+        beatae.
+      </p>
+    </div>
+    <script>
+        let text =document.getElementById('text');
+        let img1 =document.getElementById('img1');
+        let img2 =document.getElementById('img2');
+        let img3 =document.getElementById('img3');
+
+        window.addEventListener('scroll',function(){
+            let value=window.scrollY;
+            text.style.marginTop=value * -1.5+'px';
+            img1.style.top=value * 0.75+'px';
+            img2.style.top=value * 0.5+'px';
+            img3.style.top=value * 0.25+'px';
+        })
+
+    </script>
+  </body>
+</html>
